@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+  <script>
+    (function(){
+      var body = document.getElementsByTagName('body')[0];
+      var con = ['b','c','d','f','g','h','j','l','m','n','p','q','r','s','t','v','z'];
+      var vog = ['a','e','i','o','u'];
+
+      for(var i=0; i<con.length; i++){
+        for(var j=0; j<vog.length; j++){
+          for(var k=0; k<con.length; k++){
+            for(var l=0; l<vog.length; l++){
+              printWord(con[i] + vog[j] + con[k] + vog[l]);
+            }
+          }
+        }
+      }
+
+      function printWord(word){
+        var element = document.createElement('p');
+        element.innerHTML = word;
+        body.appendChild(element);
+      }
+    })();
+  </script>
+</html>
